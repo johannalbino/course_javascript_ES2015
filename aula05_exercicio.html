@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+
+        <script>
+            (function(){
+                function calcularMedia(){
+                    var total = 0;
+                    var qtd = arguments.length;
+                    var x = 0;
+
+                    while (typeof(arguments[x]) === 'number'){
+                        total += arguments[x];
+                        x++;
+                    }
+
+                    return total / qtd;
+                }
+                var media1 = calcularMedia(2, 3);
+                var media2 = calcularMedia(2, 0, 3, 10, 6);
+                console.log('Media 1: ', media1);
+                console.log('Media 2:', media2);
+            })()
+        </script>
+        <!-- <script src="qualquer.js"></script> -->
+
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+    </body>
+</html>
