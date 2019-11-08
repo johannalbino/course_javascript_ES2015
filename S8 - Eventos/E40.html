@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>
+        <button id="btn1" onclick="clicar()">Botão 1</button>
+        <button id="btn2">Botão 2</button>
+        <script>
+            var btn2 = document.getElementById('btn2');
+            btn2.onclick = clicar();
+
+            function clicar(){
+                alert('Clicou');
+            }
+        </script>        
+    </body>
+</html>

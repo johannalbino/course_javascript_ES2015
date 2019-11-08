@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>
+        <button id="btn1">Botão 1</button>
+
+        <div class="container">
+            <h1>Propagação de Eventos</h1>
+            <div id="d1" style="background: red; padding: 25px;">
+                texto dentro da div
+                <span style="background: yellow;">texto dentro da span</span>
+            </div>
+        </div>
+
+        <script>
+            var btn3 = document.getElementById('btn1');
+            btn3.addEventListener("click", function(){
+                alert('Clicou com DOM level 2');
+            });
+            btn3.addEventListener("click", function(){
+                alert('Clicou com DOM level 2 com outro evento');
+            });
+
+            var $d1 = document.querySelector('#d1');
+            var $d1Span = document.querySelector('#d1 span');
+
+            $d1.addEventListener('click', function(){
+                console.log('clique no D1');
+            }, true);
+
+            $d1Span.addEventListener('click', function(){
+                console.log('clique no D1 Span');
+            });
+
+            document.addEventListener('click', function(evento){
+                console.log('Clicou no document');
+                console.log(evento.currentTarget);
+                console.log(this);
+                console.log(evento.target);
+            });
+
+        </script>        
+    </body>
+</html>
